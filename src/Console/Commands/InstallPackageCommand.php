@@ -1,23 +1,23 @@
 <?php
 
-namespace Vendor\Package\Console\Commands;
+namespace Laravelir\Cacheable\Console\Commands;
 
 use Illuminate\Console\Command;
 
 class InstallPackageCommand extends Command
 {
-    protected $signature = 'package:install';
+    protected $signature = 'cacheable:install';
 
-    protected $description = 'Install the package Package';
+    protected $description = 'Install the cacheable Cacheable';
 
     public function handle()
     {
-        $this->line("\t... Welcome To Package Installer ...");
+        $this->line("\t... Welcome To Cacheable Installer ...");
 
 
-        // if (!empty(File::glob(database_path('migrations\*_create_packages_tables.php')))) {
+        // if (!empty(File::glob(database_path('migrations\*_create_cacheables_tables.php')))) {
 
-        //     $list  = File::glob(database_path('migrations\*_create_packages_tables.php'));
+        //     $list  = File::glob(database_path('migrations\*_create_cacheables_tables.php'));
         //     collect($list)->each(function ($item) {
         //         File::delete($item);
         //     });
@@ -27,8 +27,8 @@ class InstallPackageCommand extends Command
         //     $this->publishMigration();
         // }
 
-        // if (!empty(File::glob(database_path('migrations\*_create_package_table.php')))) {
-        //     $list  = File::glob(database_path('migrations\*_create_package_table.php'));
+        // if (!empty(File::glob(database_path('migrations\*_create_cacheable_table.php')))) {
+        //     $list  = File::glob(database_path('migrations\*_create_cacheable_table.php'));
         //     collect($list)->each(function ($item) {
         //         File::delete($item);
         //         $this->warn("Deleted: " . $item);
@@ -38,13 +38,13 @@ class InstallPackageCommand extends Command
         //     $this->publishMigration();
         // }
 
-        $this->info("Package Successfully Installed.\n");
+        $this->info("Cacheable Successfully Installed.\n");
         $this->info("\t\tGood Luck.");
     }
 
     //       //config
-    //       if (File::exists(config_path('package.php'))) {
-    //         $confirm = $this->confirm("package.php already exist. Do you want to overwrite?");
+    //       if (File::exists(config_path('cacheable.php'))) {
+    //         $confirm = $this->confirm("cacheable.php already exist. Do you want to overwrite?");
     //         if ($confirm) {
     //             $this->publishConfig();
     //             $this->info("config overwrite finished");
@@ -57,8 +57,8 @@ class InstallPackageCommand extends Command
     //     }
 
     //     //assets
-    //     if (File::exists(public_path('package'))) {
-    //         $confirm = $this->confirm("package directory already exist. Do you want to overwrite?");
+    //     if (File::exists(public_path('cacheable'))) {
+    //         $confirm = $this->confirm("cacheable directory already exist. Do you want to overwrite?");
     //         if ($confirm) {
     //             $this->publishAssets();
     //             $this->info("assets overwrite finished");
@@ -90,8 +90,8 @@ class InstallPackageCommand extends Command
     // private function publishConfig()
     // {
     //     $this->call('vendor:publish', [
-    //         '--provider' => "Vendor\\Package\\Providers\\PackageServiceProvider",
-    //         '--tag'      => 'package-config',
+    //         '--provider' => "Laravelir\\Cacheable\\Providers\\CacheableServiceProvider",
+    //         '--tag'      => 'cacheable-config',
     //         '--force'    => true
     //     ]);
     // }
@@ -99,8 +99,8 @@ class InstallPackageCommand extends Command
     // private function publishMigration()
     // {
     //     $this->call('vendor:publish', [
-    //         '--provider' => "Vendor\\Package\\Providers\\PackageServiceProvider",
-    //         '--tag'      => 'package-migrations',
+    //         '--provider' => "Laravelir\\Cacheable\\Providers\\CacheableServiceProvider",
+    //         '--tag'      => 'cacheable-migrations',
     //         '--force'    => true
     //     ]);
     // }
@@ -108,8 +108,8 @@ class InstallPackageCommand extends Command
     // private function publishAssets()
     // {
     //     $this->call('vendor:publish', [
-    //         '--provider' => "Vendor\\Package\\Providers\\PackageServiceProvider",
-    //         '--tag'      => 'package-assets',
+    //         '--provider' => "Laravelir\\Cacheable\\Providers\\CacheableServiceProvider",
+    //         '--tag'      => 'cacheable-assets',
     //         '--force'    => true
     //     ]);
     // }

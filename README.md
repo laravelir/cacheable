@@ -1,30 +1,36 @@
-- [![Starts](https://img.shields.io/github/stars/miladimos/package-skeleton?style=flat&logo=github)](https://github.com/miladimos/package-skeleton/forks)
-- [![Forks](https://img.shields.io/github/forks/miladimos/package-skeleton?style=flat&logo=github)](https://github.com/miladimos/package-skeleton/stargazers)
-  [![Total Downloads](https://img.shields.io/packagist/dt/miladimos/package-skeleton.svg?style=flat-square)](https://packagist.org/packages/miladimos/package-skeleton)
+- [![Starts](https://img.shields.io/github/stars/laravelir/cacheable?style=flat&logo=github)](https://github.com/laravelir/cacheable/forks)
+- [![Forks](https://img.shields.io/github/forks/laravelir/cacheable?style=flat&logo=github)](https://github.com/laravelir/cacheable/stargazers)
+  [![Total Downloads](https://img.shields.io/packagist/dt/laravelir/cacheable.svg?style=flat-square)](https://packagist.org/packages/laravelir/cacheable)
 
 
-# vendor/package
+# laravelir/cacheable
 
-A package for fun
+laravel cacheable
 
 ### Installation
 
-1. Run the command below to add this package:
+1. Run the command below to add this cacheable:
 
 ```
-composer require vendor/package
+composer require laravelir/cacheable
 ```
 
-2. Open your config/app.php and add the following to the providers array:
+2. Open your config/app.php and add the following to the providers/aliases array:
 
+provider:
 ```php
-Vendor\Package\Providers\PackageServiceProvider::class,
+Laravelir\Cacheable\Providers\CacheableServiceProvider::class,
+```
+
+alias:
+```php
+Laravelir\Cacheable\Facades\Cacheable::class,
 ```
 
 1. Run the command below to install the package:
 
 ```
-php artisan package:install
+php artisan cacheable:install
 ```
 
 
@@ -44,7 +50,7 @@ Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [miladimos](https://github.com/miladimos)
 - [All Contributors](../../contributors)
 
 ## License

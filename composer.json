@@ -1,7 +1,7 @@
 {
-    "name": "miladimos/package-skeleton",
-    "description": "test description",
-    "homepage": "https://github.com/miladimos/package-skeleton",
+    "name": "laravelir/cacheable",
+    "description": "laravel cacheable pacakge",
+    "homepage": "https://github.com/laravelir/cacheable",
     "type": "library",
     "version": "0.1.0",
     "keywords": [
@@ -9,6 +9,8 @@
         "laravel-package",
         "laravel support",
         "lumen packages",
+        "cache",
+        "laravel cacheable",
         "laravel packages",
         "lumen support"
     ],
@@ -22,7 +24,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Vendor\\Package\\": "src/"
+            "Laravelir\\Cacheable\\": "src/"
         },
         "files": [
             "./src/helpers.php"
@@ -30,16 +32,16 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Vendor\\Package\\Tests\\": "tests"
+            "Laravelir\\Cacheable\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Vendor\\Package\\Providers\\PackageServiceProvider"
+                "Laravelir\\Cacheable\\Providers\\CacheableServiceProvider"
             ],
             "aliases": {
-                "Package": "Vendor\\Package\\Facades\\Package"
+                "Cacheable": "Laravelir\\Cacheable\\Facades\\Cacheable"
             }
         }
     },

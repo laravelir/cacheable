@@ -16,11 +16,7 @@ class CacheableServiceProvider extends ServiceProvider
         $this->registerFacades();
     }
 
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
+
     public function boot()
     {
         $this->registerCommands();
@@ -48,5 +44,4 @@ class CacheableServiceProvider extends ServiceProvider
             __DIR__ . '/../../config/cacheable.php' => config_path('cacheable.php')
         ], 'cacheable-config');
     }
-
 }
